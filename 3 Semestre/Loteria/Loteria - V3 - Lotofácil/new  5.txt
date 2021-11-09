@@ -1,0 +1,85 @@
+Randomiza();
+
+if G1 = G2 then
+begin
+Randomiza();
+end
+else if G2 = G1 then
+begin
+Randomiza();
+end;
+
+//------------------------------------//
+if G1 = Form1.Edit1.text then
+begin
+RandomizaG1();
+end
+else if G1 = Form1.Edit2.text then
+begin
+RandomizaG1();
+end
+else if G1 = Form1.Edit3.text then
+begin
+RandomizaG1();
+end
+else if G1 = Form1.Edit4.text then
+begin
+RandomizaG1();
+end;
+//------------------------------------//
+if G2 = Form1.Edit1.text then
+begin
+RandomizaG2();
+G2 := Num1[Random(Length(Num1))];
+end
+else if G2 = Form1.Edit2.text then
+begin
+RandomizaG2();
+G2 := Num1[Random(Length(Num1))];
+end
+else if G2 = Form1.Edit3.text then
+begin
+RandomizaG2();
+G2 := Num1[Random(Length(Num1))];
+end
+else if G2 = Form1.Edit4.text then
+begin
+RandomizaG2();
+G2 := Num1[Random(Length(Num1))];
+end;
+//------------------------------------//
+for I:=1 to 2 do
+begin
+  for Indice:= Low(Num1) to High(Num1) do
+    begin
+      If ( Num1[Indice] = G1 ) then
+        begin
+          // Move o registro a ser excluído para o final do vetor
+          for IndiceAux:= ( Indice + 1) to High(Num1) do
+            Num1[Indice] := Num1[IndiceAux];
+            // Diminui 1 do tamanho do vetor
+            SetLength( Num1, Length(Num1) - 1 );
+       end;
+       If ( Num1[Indice] = G2 ) then
+        begin
+          // Move o registro a ser excluído para o final do vetor
+          for IndiceAux:= ( Indice + 1) to High(Num1) do
+            Num1[Indice] := Num1[IndiceAux];
+            // Diminui 1 do tamanho do vetor
+            SetLength( Num1, Length(Num1) - 1 );
+       end;
+    end;
+end;
+
+for I:=1 to 15 do
+begin
+N1[I]:=strtoint( Num1[I]);
+end;
+
+QuickSort(N1);
+
+for I:=1 to 15 do
+begin
+listbox1.Items.Add(inttostr(N1[I]));
+end;
+panel3.Caption:=((G1)+','+(G2));

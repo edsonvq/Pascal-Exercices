@@ -1,0 +1,95 @@
+Num1[1]:= edit1.Text;
+Num1[2]:= edit2.text;
+Num1[3]:= edit3.text;
+Num1[4]:= edit4.text;
+Num1[5]:= edit5.text;
+Num1[6]:= edit6.text;
+Num1[7]:= edit7.text;
+Num1[8]:= edit8.text;
+Num1[9]:= edit9.text;
+Num1[10]:= edit10.text;
+Num1[11]:= edit11.text;
+Num1[12]:= edit12.text;
+Num1[13]:= edit13.text;
+Num1[14]:= edit14.text;
+Num1[15]:= edit15.text;
+Num1[16]:= edit16.text;
+Num1[17]:= edit17.text;
+
+
+procedure DeleteArrayIndex(var X: TArrayString; Index: Integer);
+begin
+  if Index > High(X) then Exit;
+  if Index < Low(X) then Exit;
+  if Index = High(X) then
+  begin
+    SetLength(X, Length(X) - 1);
+    Exit;
+  end;
+  Finalize(X[Index]);
+  System.Move(X[Index +1], X[Index],
+  (Length(X) - Index -1) * SizeOf(string) + 1);
+  SetLength(X, Length(X) - 1);
+end;
+
+
+
+
+
+
+
+
+
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+var
+ NomeDigitado: string;
+  Indice, IndiceAux: Integer;
+begin
+  // Solicita o valor para ser excluído
+  NomeDigitado:= InputBox('Excluir', 'Digite o nome:', '');
+  for Indice:= Low(Nomes) to High(Nomes) do
+  begin
+    if ( Nomes[Indice] = NomeDigitado ) then
+    begin
+      // Move o registro a ser excluído para o final do vetor
+      for IndiceAux:= ( Indice + 1) to High(Nomes) do
+        Nomes[Indice] := Nomes[IndiceAux];
+      // Diminui 1 do tamanho do vetor
+      SetLength( Nomes, Length( Nomes ) - 1 );
+      Exit(); // sai do loop pois excluiu a primeira ocorrência do nome
+    end;
+  end;
+end;
+
+
+for Indice:= Low(Num1) to High(Num1) do
+begin
+  if ( Num1[Indice] = G1 ) then
+  begin
+    // Move o registro a ser excluído para o final do vetor
+    for IndiceAux:= ( Indice + 1) to High(Num1) do
+    Num1[Indice] := Num1[IndiceAux];
+    // Diminui 1 do tamanho do vetor
+    SetLength( Num1, Length( Num1 ) - 1 );
+  end;
+end;

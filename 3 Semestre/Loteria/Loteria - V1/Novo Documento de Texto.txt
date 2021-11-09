@@ -1,0 +1,225 @@
+unit Unit3;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, jpeg, ExtCtrls, StdCtrls;
+
+type
+  TForm3 = class(TForm)
+    Panel1: TPanel;
+    Label1: TLabel;
+    Image1: TImage;
+    Panel2: TPanel;
+    Label2: TLabel;
+    Panel8: TPanel;
+    Label8: TLabel;
+    Panel3: TPanel;
+    Label3: TLabel;
+    Panel4: TPanel;
+    Label4: TLabel;
+    Panel5: TPanel;
+    Label5: TLabel;
+    Panel6: TPanel;
+    Label6: TLabel;
+    Panel7: TPanel;
+    Label7: TLabel;
+    Panel9: TPanel;
+    Label9: TLabel;
+    Panel10: TPanel;
+    Label10: TLabel;
+    Panel11: TPanel;
+    Label11: TLabel;
+    Panel12: TPanel;
+    Label12: TLabel;
+    Panel13: TPanel;
+    Label13: TLabel;
+    Panel14: TPanel;
+    Label14: TLabel;
+    Panel15: TPanel;
+    Label15: TLabel;
+    Panel16: TPanel;
+    Label16: TLabel;
+    Panel17: TPanel;
+    Label17: TLabel;
+    Panel18: TPanel;
+    Label18: TLabel;
+    Panel19: TPanel;
+    procedure Image1Click(Sender: TObject);
+    procedure Panel19Click(Sender: TObject);
+    procedure Panel7Click(Sender: TObject);
+    procedure Label7Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form3: TForm3;
+  i,n1,n2,n3,n4,n5,n6,n7,n8,n9,n10,n11,n12,n13,n14,n15:integer;
+  Numero: array [1..15] of integer;
+implementation
+
+uses Unit1;
+
+{$R *.dfm}
+
+procedure TForm3.Image1Click(Sender: TObject);
+begin
+label2.caption:='00';
+label3.caption:='00';
+label4.caption:='00';
+label5.caption:='00';
+label6.caption:='00';
+label8.caption:='00';
+label10.caption:='00';
+label11.caption:='00';
+label12.caption:='00';
+label13.caption:='00';
+label14.caption:='00';
+label15.caption:='00';
+label16.caption:='00';
+label17.caption:='00';
+label18.caption:='00';
+form1.show;
+form3.close;
+end;
+
+procedure TForm3.Panel19Click(Sender: TObject);
+begin
+label2.caption:='00';
+label3.caption:='00';
+label4.caption:='00';
+label5.caption:='00';
+label6.caption:='00';
+label8.caption:='00';
+label10.caption:='00';
+label11.caption:='00';
+label12.caption:='00';
+label13.caption:='00';
+label14.caption:='00';
+label15.caption:='00';
+label16.caption:='00';
+label17.caption:='00';
+label18.caption:='00';
+end;
+
+procedure TForm3.Panel7Click(Sender: TObject);
+begin
+Randomize;
+for i := 1 to 15 do
+begin
+while Numero[i] < 1 begin
+if (i = 1) then
+Numero[i]:= Random(25);
+if (i = 2) then
+n2:= Random(25);
+if (i = 3) then
+n3:= Random(25);
+if (i = 4) then
+n4:= Random(25);
+if (i = 5) then
+n5:= Random(25);
+if (i = 6) then
+n6:= Random(25);
+if (i = 7) then
+n7:= Random(25);
+if (i = 8) then
+n8:= Random(25);
+if (i = 9) then
+n9:= Random(25);
+if (i = 10) then
+n10:= Random(25);
+if (i = 11) then
+n11:= Random(25);
+if (i = 12) then
+n12:= Random(25);
+if (i = 13) then
+n13:= Random(25);
+if (i = 14) then
+n14:= Random(25);
+if (i = 15) then
+n15:= Random(25);
+end;
+end;
+label2.caption:=IntToStr(n1);
+label3.caption:=IntToStr(n2);
+label4.caption:=IntToStr(n3);
+label5.caption:=IntToStr(n4);
+label6.caption:=IntToStr(n5);
+label8.caption:=IntToStr(n6);
+label10.caption:=IntToStr(n7);
+label11.caption:=IntToStr(n8);
+label12.caption:=IntToStr(n9);
+label13.caption:=IntToStr(n10);
+label14.caption:=IntToStr(n11);
+label15.caption:=IntToStr(n12);
+label16.caption:=IntToStr(n13);
+label17.caption:=IntToStr(n14);
+label18.caption:=IntToStr(n15);
+
+end;
+
+procedure TForm3.Label7Click(Sender: TObject);
+begin
+Randomize;
+for i := 1 to 15 do
+begin
+if (i = 1) then
+n1:= Random(25);
+if(n1 = n2) and (n1 = n3) and (n1 = n4)
+and (n1 = n5) and (n1 = n6) and (n1 = n7)
+and (n1 = n8) and (n1 = n9) and (n1 = n10)
+and (n1 = n11) and (n1 = n12) and (n1 = n13)
+and (n1 = n14) and (n1 = n15)then
+n1:= Random(25);
+if (i = 2) then
+n2:= Random(25);
+if (i = 3) then
+n3:= Random(25);
+if (i = 4) then
+n4:= Random(25);
+if (i = 5) then
+n5:= Random(25);
+if (i = 6) then
+n6:= Random(25);
+if (i = 7) then
+n7:= Random(25);
+if (i = 8) then
+n8:= Random(25);
+if (i = 9) then
+n9:= Random(25);
+if (i = 10) then
+n10:= Random(25);
+if (i = 11) then
+n11:= Random(25);
+if (i = 12) then
+n12:= Random(25);
+if (i = 13) then
+n13:= Random(25);
+if (i = 14) then
+n14:= Random(25);
+if (i = 15) then
+n15:= Random(25);
+end;
+label2.caption:=IntToStr(n1);
+label3.caption:=IntToStr(n2);
+label4.caption:=IntToStr(n3);
+label5.caption:=IntToStr(n4);
+label6.caption:=IntToStr(n5);
+label8.caption:=IntToStr(n6);
+label10.caption:=IntToStr(n7);
+label11.caption:=IntToStr(n8);
+label12.caption:=IntToStr(n9);
+label13.caption:=IntToStr(n10);
+label14.caption:=IntToStr(n11);
+label15.caption:=IntToStr(n12);
+label16.caption:=IntToStr(n13);
+label17.caption:=IntToStr(n14);
+label18.caption:=IntToStr(n15);
+
+end;
+
+end.

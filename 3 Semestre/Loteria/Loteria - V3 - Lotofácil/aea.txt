@@ -1,0 +1,50 @@
+var
+  cu, xana : string;
+begin
+
+  cu     := '123456789';
+  xana   := '---------';
+
+  // Vai mover
+ 
+  Move(cu[5], xana[3], 4);
+  mover cu apartir do 5 para xana apartir do 3 
+  move 4 parametros do cu para xana 
+  Move mover[parametro]. para[parametro], quantos quer
+
+  ShowMessage('cu = '+cu);
+  ShowMessage('xana   = '+xana);
+end;
+
+
+Show full unit code
+   cu = 123456789
+   xana   = --5678---
+   
+   
+If (A = Length(Num1)) then
+
+N:= A-1;
+
+Move(Num1[A], Num1[N],(Length(Num1) - I) * SizeOf(string) + 1) ;
+
+Move(Length(Num1), Num1[N],(Length(Num1) - I) * SizeOf(string) + 1) ;
+
+
+  Move(cu[5], xana[3], 4);
+  Move(hue[5], hue[1], 5);
+  Move(mc[9], mc[1], 1);
+  
+  Move(Num1[A], Num1[N],(Length(Num1) - i) * SizeOf(string) + 1) ;
+  
+  Move(Num1[N], Num1[A],(Length(Num1) - N) * SizeOf(string) + 1) ;
+// mover[parametro]. para[parametro], quantos quer
+
+  ShowMessage('cu = '+cu);
+  ShowMessage('xana   = '+xana);
+  ShowMessage('hue   = ' + inttostr(hue[1]));
+  ShowMessage('MC   = ' + mc);
+  
+
+System.Move(Length(Num1), arrayTeste[N],(Length(arrayTeste) - 4) * SizeOf(string) + 1) ;
+Finalize(arrayTeste[5]);

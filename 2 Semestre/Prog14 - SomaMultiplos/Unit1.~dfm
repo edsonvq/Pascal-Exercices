@@ -1,0 +1,80 @@
+object Form1: TForm1
+  Left = 69
+  Top = 161
+  Width = 979
+  Height = 541
+  Caption = 'Form1'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -19
+  Font.Name = 'MS Sans Serif'
+  Font.Style = [fsBold]
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 24
+  object Label1: TLabel
+    Left = 128
+    Top = 8
+    Width = 658
+    Height = 24
+    Caption = 
+      'Soma e a quantidade de todos os n'#250'meros m'#250'ltiplos de 6 de 1 at'#233' ' +
+      '500'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold, fsUnderline]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 8
+    Top = 72
+    Width = 392
+    Height = 24
+    Caption = 'Valor da soma de todos os Multiplos de 6:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 408
+    Top = 72
+    Width = 7
+    Height = 24
+  end
+  object Label4: TLabel
+    Left = 8
+    Top = 120
+    Width = 281
+    Height = 24
+    Caption = 'Quantidade de multiplos de 6:'
+  end
+  object Label5: TLabel
+    Left = 296
+    Top = 120
+    Width = 7
+    Height = 24
+  end
+  object ListBox1: TListBox
+    Left = 472
+    Top = 72
+    Width = 441
+    Height = 273
+    ItemHeight = 24
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 720
+    Top = 368
+    Width = 193
+    Height = 41
+    Caption = 'Calcular'
+    TabOrder = 1
+    OnClick = Button1Click
+  end
+end

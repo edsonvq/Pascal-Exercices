@@ -1,0 +1,48 @@
+try
+for i := low(Num1) to High(Num1) do lista.Add(inttostr(Num1[i]));
+
+i:= Low(Num1);
+while lista.Count <> 0 do
+begin
+  A := Random(lista.Count);
+  Num1[i] := strtoint(lista[A]); //atualiza vetor com a nova posicao
+  lista.Delete(A); //remove da lista para não ser repetido
+  i := i + 1;
+end;
+finally
+lista.Free;
+end;
+
+
+
+	for cont := 1 to length(Num1) do
+	begin
+		randomize;
+		posi1 := random(length(Num1));
+		posi2 := random(length(Num1));
+		char_aux := inttostr(Num1[posi1]);
+		Num1[posi1] := Num1[posi2];
+		Num1[posi2] := strtoint(char_aux);
+	end;
+	
+	
+	
+	  N:= A+1;
+  Move(Num1[A], Num1[N],(Length(Num1) - I) * SizeOf(string) + 1) ;
+  
+  
+   listbox1.Items.Add(inttostr(A));
+ listbox1.Items.Add(inttostr(N1[2]));
+ listbox1.Items.Add(inttostr(N1[3]));
+ listbox1.Items.Add(inttostr(N1[4]));
+ listbox1.Items.Add(inttostr(N1[5]));
+ listbox1.Items.Add(inttostr(N1[6]));
+ listbox1.Items.Add(inttostr(N1[7]));
+ listbox1.Items.Add(inttostr(N1[8]));
+ listbox1.Items.Add(inttostr(N1[9]));
+ listbox1.Items.Add(inttostr(N1[10]));
+ listbox1.Items.Add(inttostr(N1[11]));
+ listbox1.Items.Add(inttostr(N1[12]));
+ listbox1.Items.Add(inttostr(N1[13]));
+ listbox1.Items.Add(inttostr(N1[14]));
+ listbox1.Items.Add(inttostr(N1[15]));

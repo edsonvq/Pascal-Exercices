@@ -1,0 +1,26 @@
+Var
+  I : Integer;
+begin
+  I := 0;
+  while I < 10 do
+  begin
+    if I mod 2 = 0 then
+    begin
+     if I = 6 then
+     begin
+       ShowMessage('Valor é 6');
+       I := I + 1;
+       Continue;
+     end
+     else
+     if I = 8 then
+     begin
+       ShowMessage('Parou quando I = 8');
+       Break;
+       ShowMessage('Esta linha não é Executada!!!!');
+     end;
+     ShowMessage(IntToStr(I));
+    end;
+    I := I + 1;
+  end;
+end;
